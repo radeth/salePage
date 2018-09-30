@@ -1,0 +1,134 @@
+header {
+    background: url('*/../../img/beach-blue-horizon-462089.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#buttonDiv {
+    z-index: 1;
+}
+
+#buttonOne {
+    position: sticky;
+    z-index: 1;
+    color: #fff;
+    padding: 1rem;
+    background: linear-gradient(90deg, #6865fc, #f4ab1a, #ff5e01, #6865fc);
+    background-size: 400%;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    font-size: sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+        animation: buttonAnimate 8s linear infinite;
+    }
+    &:before {
+        content: '';
+        border: 1px solid red;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        bottom: -15px;
+        right: -15px;
+        z-index: -1;
+        background: linear-gradient(90deg, #2926cc, #f4ab1a, #ff5e01, #2926cc);
+        background-size: 400%;
+        border-radius: 40px;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    &:hover:before {
+        opacity: 1;
+        filter: blur(30px);
+        animation: buttonAnimate 8s linear infinite;
+    }
+}
+
+@keyframes buttonAnimate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+section {
+    background: url('*/../../img/beach-bird-s-eye-view-mobile-wallpaper-35626.jpg') no-repeat center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    .content {
+        ul {
+            float: left;
+            list-style: none;
+            li {
+                overflow: hidden;
+            }
+        }
+        .imgBox {
+            float: left;
+        } 
+    }
+}
+@keyframes preLoaderAnimation{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1);
+        opacity: 1
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.preLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right top, #0d284f, #753b75, #d1506d, #ff8e46, #ede232);
+    height: 100vh;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    transition: opacity 2s ease;
+    .dot {
+        margin: 1.1rem;
+        border: 3px solid white;
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
+        animation: preLoaderAnimation 1s infinite;
+        &:nth-child(2){
+            animation-delay: 300ms;
+        }
+        &::nth-child(3){
+            animation-delay: 600ms;
+        }
+    }
+}
+
+.preLoaderInProgres {
+    opacity: 0;
+}
+
+.preLoaderComplete {
+    display: none;
+}
+.options{
+    display: flex;
+    justify-content: space-around;
+    select{
+        width: 40%
+    }
+    button{
+        width: 40%;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
