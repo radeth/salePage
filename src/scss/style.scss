@@ -3,11 +3,6 @@ header {
     background-size: cover;
     min-height: 100vh;
 }
-
-#buttonDiv {
-    z-index: 1;
-}
-
 #buttonOne {
     position: sticky;
     z-index: 1;
@@ -119,14 +114,26 @@ section {
     display: none;
 }
 .options{
-    display: flex;
-    justify-content: space-around;
-    select{
-        width: 40%
+    a{
+        text-decoration: none;
+        div{
+            position: relative;
+            height: calc(2.25rem + 2px);
+            &:before{
+                content: "";
+                position: absolute;
+                top: 200px;
+                left: 20px;
+                bottom: 20px;
+                right: 20px;
+                border: 1px solid red;
+
+                
+            }
+        }
     }
-    button{
-        width: 40%;
-    }
+}
+form{
     a{
         text-decoration: none;
         color: white;
