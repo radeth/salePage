@@ -119,17 +119,6 @@ section {
         div{
             position: relative;
             height: calc(2.25rem + 2px);
-            &:before{
-                content: "";
-                position: absolute;
-                top: 200px;
-                left: 20px;
-                bottom: 20px;
-                right: 20px;
-                border: 1px solid red;
-
-                
-            }
         }
     }
 }
@@ -138,4 +127,10 @@ form{
         text-decoration: none;
         color: white;
     }
+}
+footer{
+    background: url('*/../../img/beach-bird-s-eye-view-mobile-wallpaper-35626.jpg') no-repeat center fixed;
+    background-size: cover;
+    font-size: 3rem;
+    text-align: center;
 }
