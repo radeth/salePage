@@ -51,23 +51,94 @@
                         </a>
                     </div>
                     <div class="options row justify-content-center">
-                        <div class="col-5">
+                        <div class="col-auto">
                             <select class="form-control mt-3">
-                                <option>Rozmiar S</option>
-                                <option>Rozmiar M</option>
-                                <option>Rozmiar L</option>
-                                <option>Rozmiar XL</option>
+                                <option>Koszulka Rozmiar S</option>
+                                <option>Koszulka Rozmiar M</option>
+                                <option>Koszulka Rozmiar L</option>
+                                <option>Koszulka Rozmiar XL</option>
                             </select>
                         </div>
-                        <div class="col-5">
-                            <a href="form.html">
-                                <div class="w-100 rounded bg-light text-primary mt-3 p-2 text-center" id='buyButton'><p>Kup</p></div>
-                            </a>
+                    </div>
+                        <div class="options row justify-content-center">
+                        <div class="col-auto">
+                            <button class="btn mt-3"><a href="#">do koszyka</a></button>
+                        </div>
                         </div>
                     </div>
+                </div>
+                
                     
 
                 </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container align-items-center">
+            <div class="row justify-content-center">
+                <form class="needs-validation mt-5" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Imie</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Imie" required>
+                            <div class="valid-feedback">
+                                <p>OK</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom02">Nazwisko</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="Nazwisko" required>
+                            <div class="valid-feedback">
+                                <p>OK</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustomUsername">Email</label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="validationCustomUsername" placeholder="Email" required>
+                                <div class="invalid-feedback">
+                                    <p>Podaj adres email</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Miasto</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="Miasto" required>
+                            <div class="invalid-feedback">
+                                <p>Podaj Miasto</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom04">Ulica Nr Domu/Nr Ulicy</label>
+                            <input type="text" class="form-control" id="validationCustom04" placeholder="Ulica" required>
+                            <div class="invalid-feedback">
+                                <p>Podaj Ulice</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom05">Kod Pocztowy</label>
+                            <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                            <div class="invalid-feedback">
+                                <p>Podaj kod pocztowy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col w-100 h-100">
+                            <label>zamówienie</label>
+                                <input id="order" class="form-control mt-3 h-100" type="text" disabled>
+                        </div>
+                    </div>
+                    <div class="form-row justify-content-center">
+                        <div class="col-auto">
+                            <button class="btn btn-primary mt-3" type="submit">Kup</button>
+                        </div>
+                        <div class="col-auto"><button id='clearOrder' class="btn btn-primary mt-3"><a href="index.html">Wyczyśc koszyk</a></button></div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>

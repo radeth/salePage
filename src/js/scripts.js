@@ -1,25 +1,21 @@
 'use strict';
 (function () {
+    var order = '';
     $(window).on('load', function () {
         $('.preLoader').addClass('preLoaderInProgres')
-
         $('.preLoader').on('transitionend', function () {
             $(this).addClass('preLoaderComplete')
             $(this).removeClass('preLoaderInProgres')
         })
-        let cookie = document.cookie.split('=')
-        let order = cookie[1]
-        console.log(order);
-        $('#order').attr('value', order)
-
-
     })
+
     $("#buttonOne").on('click', function () {
         console.log('test')
         $('html,body').animate({
             scrollTop: $("section").offset().top
         }, 1000)
     })
+
     window.addEventListener('load', function () {
         var forms = document.getElementsByClassName('needs-validation');
 
@@ -34,9 +30,17 @@
         });
     }, false);
 
-    $('.options a').on('click', function () {
-        this._order = $('.options select').val()
-        document.cookie = 'order' + "=" + this._order;
+    $('.options button').on('click', function (e) {
+        e.preventDefault();
+        order = order + ' ' + $(this).parent().parent().parent().find('select').val() +'\n'
+        console.log(order)
+        $('#order').attr('value',order)
+
+    })
+    $('#clearOrder').on('click',function(e){
+        e.preventDefault();
+        order = '';
+        $('#order').attr('value',order)
     })
 
 })();

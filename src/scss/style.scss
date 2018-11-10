@@ -3,6 +3,7 @@ header {
     background-size: cover;
     min-height: 100vh;
 }
+
 #buttonOne {
     position: sticky;
     z-index: 1;
@@ -52,7 +53,7 @@ header {
 section {
     background: url('*/../../img/beach-bird-s-eye-view-mobile-wallpaper-35626.jpg') no-repeat center fixed;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 70vh;
     .content {
         ul {
             float: left;
@@ -63,21 +64,23 @@ section {
         }
         .imgBox {
             float: left;
-        } 
+        }
     }
 }
-@keyframes preLoaderAnimation{
-    0%{
+
+@keyframes preLoaderAnimation {
+    0% {
         transform: scale(0);
     }
-    50%{
+    50% {
         transform: scale(1);
         opacity: 1
     }
-    100%{
+    100% {
         opacity: 0;
     }
 }
+
 .preLoader {
     display: flex;
     justify-content: center;
@@ -97,10 +100,10 @@ section {
         height: 1.3rem;
         border-radius: 50%;
         animation: preLoaderAnimation 1s infinite;
-        &:nth-child(2){
+        &:nth-child(2) {
             animation-delay: 300ms;
         }
-        &::nth-child(3){
+        &::nth-child(3) {
             animation-delay: 600ms;
         }
     }
@@ -113,28 +116,49 @@ section {
 .preLoaderComplete {
     display: none;
 }
-.options{
-    a{
+
+.options {
+    a {
         text-decoration: none;
-        div{
+        div {
             position: relative;
             height: calc(2.25rem + 2px);
         }
     }
+    #order {
+        height: 30%;
+    }
 }
-form{
-    a{
+
+form {
+    a {
         text-decoration: none;
         color: white;
     }
 }
-footer{
+
+footer {
     background: url('*/../../img/beach-bird-s-eye-view-mobile-wallpaper-35626.jpg') no-repeat center fixed;
     background-size: cover;
     font-size: 3rem;
     text-align: center;
 }
-.needs-validation{
+
+.needs-validation {
     font-size: 1.1rem;
     font-weight: bold;
+    label {
+        //background: linear-gradient(90deg, #6865fc, #f4ab1a, #ff5e01, #6865fc);
+        color: #3b3a39;
+    }
+}
+
+.test {
+    border: 1px solid red;
+}
+
+.cart {
+    position: fixed;
+    font-size: 3rem;
+    
 }
