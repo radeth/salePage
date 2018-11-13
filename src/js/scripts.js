@@ -1,6 +1,7 @@
 'use strict';
 (function () {
     $(window).on('load', function () {
+        console.log('test')
         $('.preLoader').addClass('preLoaderInProgres')
 
         $('.preLoader').on('transitionend', function () {

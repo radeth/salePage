@@ -1,6 +1,6 @@
 Skip to content
  
-Search or jump to…
+Search or jump toï¿½
 
 Pull requests
 Issues
@@ -53,6 +53,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+pass.txt
 
 # TypeScript v1 declaration files
 typings/
@@ -89,7 +90,7 @@ typings/
 
 # Serverless directories
 .serverless
-© 2018 GitHub, Inc.
+ï¿½ 2018 GitHub, Inc.
 Terms
 Privacy
 Security

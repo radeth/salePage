@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify-es').default;
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
@@ -28,7 +28,7 @@ var config = {
   htmlout: 'dist/',
   scssout: 'src/css/',
   cssoutname: 'style.css',
-  jsoutname: 'script.js',
+  jsoutname: 'scripts.js',
   cssreplaceout: 'css/style.css',
   jsreplaceout: 'js/script.js'
 };
@@ -96,9 +96,8 @@ gulp.task('html', function() {
 gulp.task('clean', function() {
   return del([config.dist]);
 });
-
 gulp.task('build', function() {
-  sequence('clean', ['html', 'js', 'css', 'img']);
+  sequence('clean', ['html', 'js', 'css', 'img',]);
 });
 
 gulp.task('default', ['serve']);
